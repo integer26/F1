@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">F1</string>
+    <string name="title_activity_general_fragment">GeneralFragment</string>
+</resources>
