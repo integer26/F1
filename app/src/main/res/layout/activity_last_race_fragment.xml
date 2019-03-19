@@ -10,14 +10,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:layout_marginStart="8dp"
-        android:padding="4dp"
+        android:fontFamily="@font/abril_fatface"
+        android:paddingTop="16dp"
         android:textColor="@android:color/black"
-        android:textSize="20dp"
+        android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/recycler_risultati_piloti"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_risultati_piloti"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:paddingTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
     <TextView
         android:id="@+id/text_di_errore"
@@ -26,7 +43,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="142dp"
+        android:layout_marginBottom="8dp"
         android:text="Spiacenti si è verificato un errore.\n Assicurati che la connessione sia attiva oppure riprova più tardi"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -49,21 +66,6 @@
         app:layout_constraintStart_toStartOf="@+id/recycler_risultati_piloti"
         app:layout_constraintTop_toTopOf="@+id/recycler_risultati_piloti" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_risultati_piloti"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024">
 
-    </androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
