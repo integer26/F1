@@ -1,8 +1,7 @@
 package com.int26.newsoft.f1;
 
 import android.content.Context;
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +9,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
 
@@ -43,7 +45,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     //Qui riempio i vari campi con gli elementi al indice ennesimo dei vari ArrayList
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(@NonNull ViewHolder viewHolder, final int i) {
 
         viewHolder.posPilota.setText(posizioniPiloti.get(i));
         viewHolder.numPilota.setText(numeriPiloti.get(i));
@@ -51,7 +53,16 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         viewHolder.scuderiaPilota.setText(scuderiePiloti.get(i));
         viewHolder.puntiPilota.setText(puntiPiloti.get(i));
 
-        //Qui posso inserire un listener per effettuare un action sul singolo item
+        //Listener per gli item che vengono cliccati (non obbligatorio)
+
+        viewHolder.parentLayout.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                Intent intent = new Intent(mContext, InfoActivity.class);
+                intent.putExtra("nome_pilota", nomiPiloti.get(i));
+                mContext.startActivity(intent);
+            }
+        });
 
     }
 
