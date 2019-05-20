@@ -42,6 +42,7 @@ public class LastRaceFragment extends Fragment {
     private ProgressBar progressBar;
     private TextView testoErroreConess;
     private TextView titoloGara;
+    private View pallinoVeloce;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -53,6 +54,7 @@ public class LastRaceFragment extends Fragment {
         progressBar = v.findViewById(R.id.progress_circular);
         testoErroreConess = v.findViewById(R.id.text_di_errore);
         titoloGara = v.findViewById(R.id.titolo_gara);
+        pallinoVeloce = v.findViewById(R.id.cerchio_fast);
         prendiRisultati();
 
         return v;
@@ -101,6 +103,13 @@ public class LastRaceFragment extends Fragment {
                             String nomeCompleto = infoPilota.getString("givenName") + " " + infoPilota.getString("familyName");
 
                             nomiPiloti.add(nomeCompleto);
+
+//                            JSONObject fastLap = pilota.getJSONObject("FastestLap");
+//
+//                            if (fastLap.getString("rank").equals("1")){
+//
+//                                pallinoVeloce.setVisibility(View.VISIBLE);
+//                            }
 
                             JSONObject infoScuderia = pilota.getJSONObject("Constructor");
 
