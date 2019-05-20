@@ -3,11 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/calculator"
-        android:icon="@drawable/ic_info"
+        android:icon="@drawable/ic_racing_flag"
         android:title="Ultima gara"/>
     <item
         android:id="@+id/info"
-        android:icon="@drawable/ic_insert"
+        android:icon="@drawable/ic_winner"
         android:title="Classifica"/>
 
 </menu>

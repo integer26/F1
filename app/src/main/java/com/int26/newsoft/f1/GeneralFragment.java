@@ -85,7 +85,10 @@ public class GeneralFragment extends Fragment {
                             puntiPiloti.add(trivia.getString("points"));
 
                             JSONObject pilota = trivia.getJSONObject("Driver");
-                            nomiPiloti.add(pilota.getString("familyName"));
+
+                            String nomeCompleto = pilota.getString("givenName") + " " + pilota.getString("familyName");
+
+                            nomiPiloti.add(nomeCompleto);
                             numeriPiloti.add(pilota.getString("permanentNumber"));
 
                             JSONArray costruttori = trivia.getJSONArray("Constructors");

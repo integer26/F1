@@ -92,14 +92,15 @@ public class LastRaceFragment extends Fragment {
                         for (int p = 0; p < arrayRisultatiPiloti.length(); p++) {
 
                             JSONObject pilota = arrayRisultatiPiloti.getJSONObject(p);
-
                             posizioniPiloti.add(pilota.getString("position"));
                             numeriPiloti.add(pilota.getString("number"));
                             puntiPiloti.add(pilota.getString("points"));
 
                             JSONObject infoPilota = pilota.getJSONObject("Driver");
 
-                            nomiPiloti.add(infoPilota.getString("familyName"));
+                            String nomeCompleto = infoPilota.getString("givenName") + " " + infoPilota.getString("familyName");
+
+                            nomiPiloti.add(nomeCompleto);
 
                             JSONObject infoScuderia = pilota.getJSONObject("Constructor");
 
