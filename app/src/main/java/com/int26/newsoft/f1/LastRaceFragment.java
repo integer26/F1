@@ -41,7 +41,6 @@ public class LastRaceFragment extends Fragment {
 
     private ProgressBar progressBar;
     private TextView testoErroreConess;
-    private TextView titoloGara;
     private View pallinoVeloce;
 
     @Override
@@ -53,7 +52,6 @@ public class LastRaceFragment extends Fragment {
 
         progressBar = v.findViewById(R.id.progress_circular);
         testoErroreConess = v.findViewById(R.id.text_di_errore);
-        titoloGara = v.findViewById(R.id.titolo_gara);
         pallinoVeloce = v.findViewById(R.id.cerchio_fast);
         prendiRisultati();
 
@@ -83,8 +81,6 @@ public class LastRaceFragment extends Fragment {
                         //E prendo l'oggetto posizionato ad ogni "i", in questo caso dovrebbe esserci solo 1
                         JSONObject gara = arrayRisultatiGare.getJSONObject(i);
 
-                        String nomeGP = gara.getString("raceName");
-                        titoloGara.setText(nomeGP);
                         //Prendo l'array con i risultati dei piloti che si trova nell'oggetto alla posizione i
                         //Cioè la i-esima gara della stagione
                         JSONArray arrayRisultatiPiloti = gara.getJSONArray("Results");

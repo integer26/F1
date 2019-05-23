@@ -8,7 +8,7 @@
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="310dp"
+        android:layout_width="330dp"
         android:layout_height="113dp"
         android:layout_gravity="center"
         android:layout_margin="8dp"
@@ -141,7 +141,7 @@
                     android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/punti_pilota_gara"
-                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintHorizontal_bias="0.56"
                     app:layout_constraintStart_toEndOf="@+id/num_pilota_gara"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0" />

@@ -36,10 +36,8 @@ public class GeneralFragment extends Fragment {
     private ArrayList<String> puntiPiloti = new ArrayList<>();
 
     private RecyclerView recyclerView;
-
     private ProgressBar progressBar;
     private TextView testoErroreConess;
-    private TextView nomeClassifica;
 
 
     @Override
@@ -48,12 +46,12 @@ public class GeneralFragment extends Fragment {
         super.onCreate(savedInstanceState);
         setRetainInstance(true);
 
-        recyclerView = v.findViewById(R.id.recycler_class_generale);
+        prendiRisultati();
 
+        recyclerView = v.findViewById(R.id.recycler_class_generale);
         progressBar = v.findViewById(R.id.progress_circular_gen);
         testoErroreConess = v.findViewById(R.id.text_di_errore_gen);
-        nomeClassifica = v.findViewById(R.id.nome_classifica_gen);
-        prendiRisultati();
+
 
         return v;
     }
@@ -101,8 +99,6 @@ public class GeneralFragment extends Fragment {
                             }
 
                         }
-
-                        nomeClassifica.setVisibility(View.VISIBLE);
                         initRecyclerView();
 
                     }
