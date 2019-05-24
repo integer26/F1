@@ -7,6 +7,17 @@
     <color name="black">#000</color>
     <color name="neretto">#333333</color>
     <color name="grigino">#656565</color>
+
+    <color name="ferrari">#DC0000</color>
+    <color name="mercedes">#00D2BE</color>
+    <color name="redbull">#1E41FF</color>
+    <color name="renault">#FFF500</color>
+    <color name="haas">#F0D787</color>
+    <color name="mcclaren">#FF8700</color>
+    <color name="racingpoint">#F596C8</color>
+    <color name="alfaromeo">#9B0000</color>
+    <color name="tororosso">#469BFF</color>
+    <color name="williams">#FFFFFF</color>
 </resources>
 
 

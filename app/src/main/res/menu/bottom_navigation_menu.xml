@@ -2,12 +2,12 @@
 <menu
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/calculator"
+        android:id="@+id/last_race"
         android:icon="@drawable/ic_racing_flag"
         android:title="Ultima gara"/>
     <item
-        android:id="@+id/info"
+        android:id="@+id/general_chart"
         android:icon="@drawable/ic_winner"
-        android:title="Classifica"/>
+        android:title="Classifica generale" />
 
 </menu>

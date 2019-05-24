@@ -11,6 +11,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
@@ -53,6 +54,44 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         viewHolder.scuderiaPilota.setText(scuderiePiloti.get(i));
         viewHolder.puntiPilota.setText(puntiPiloti.get(i));
 
+        //trovo il nome della scuderia
+        String scuderia = viewHolder.scuderiaPilota.getText().toString().trim();
+
+        //modifico il colore dinamicamente in base alla scuderia
+        switch (scuderia) {
+            case "Mercedes":
+                viewHolder.coloreScuderia.setBackgroundColor(ContextCompat.getColor(mContext, R.color.mercedes));
+                break;
+            case "Red Bull":
+                viewHolder.coloreScuderia.setBackgroundColor(ContextCompat.getColor(mContext, R.color.redbull));
+                break;
+            case "Ferrari":
+                viewHolder.coloreScuderia.setBackgroundColor(ContextCompat.getColor(mContext, R.color.ferrari));
+                break;
+            case "Haas F1 Team":
+                viewHolder.coloreScuderia.setBackgroundColor(ContextCompat.getColor(mContext, R.color.haas));
+                break;
+            case "McLaren":
+                viewHolder.coloreScuderia.setBackgroundColor(ContextCompat.getColor(mContext, R.color.mcclaren));
+                break;
+            case "Toro Rosso":
+                viewHolder.coloreScuderia.setBackgroundColor(ContextCompat.getColor(mContext, R.color.tororosso));
+                break;
+            case "Renault":
+                viewHolder.coloreScuderia.setBackgroundColor(ContextCompat.getColor(mContext, R.color.redbull));
+                break;
+            case "Alfa Romeo":
+                viewHolder.coloreScuderia.setBackgroundColor(ContextCompat.getColor(mContext, R.color.alfaromeo));
+                break;
+            case "Racing Point":
+                viewHolder.coloreScuderia.setBackgroundColor(ContextCompat.getColor(mContext, R.color.racingpoint));
+                break;
+            case "Williams":
+                viewHolder.coloreScuderia.setBackgroundColor(ContextCompat.getColor(mContext, R.color.williams));
+                break;
+
+        }
+
         //Listener per gli item che vengono cliccati (non obbligatorio)
 
         viewHolder.parentLayout.setOnClickListener(new View.OnClickListener() {
@@ -82,6 +121,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         TextView scuderiaPilota;
         TextView puntiPilota;
         LinearLayout parentLayout;
+        View coloreScuderia;
+        //View pallinoVeloce;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -92,6 +133,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             scuderiaPilota = itemView.findViewById(R.id.scuderia_pilota_gara);
             puntiPilota = itemView.findViewById(R.id.punti_pilota_gara);
             parentLayout = itemView.findViewById(R.id.lista_layout);
+            coloreScuderia = itemView.findViewById(R.id.bordo_colore_card);
+            //pallinoVeloce = itemView.findViewById(R.id.cerchio_fast);
         }
     }
 }

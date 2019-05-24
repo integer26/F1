@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         titoloGara = findViewById(R.id.titolo_gara);
+        prendiTitoloGara();
 
         //loading the default fragment
         loadFragment(new LastRaceFragment());
@@ -37,12 +38,11 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         //getting bottom navigation view and attaching the listener
         BottomNavigationView navigation = findViewById(R.id.bottom_navigation);
         navigation.setOnNavigationItemSelectedListener(this);
-        prendiRisultati();
 
     }
 
 
-    private void prendiRisultati() {
+    private void prendiTitoloGara() {
 
         RequestQueue queue = Volley.newRequestQueue(Objects.requireNonNull(this));
 
@@ -90,12 +90,14 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         Fragment fragment = null;
 
         switch (menuItem.getItemId()) {
-            case R.id.calculator:
+            case R.id.last_race:
                 fragment = new LastRaceFragment();
+                prendiTitoloGara();
                 break;
 
-            case R.id.info:
+            case R.id.general_chart:
                 fragment = new GeneralFragment();
+                titoloGara.setText("Classifica Generale");
                 break;
 
         }
